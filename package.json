@@ -1,0 +1,15 @@
+{
+  "name": "kluski",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "next-pow-2": "^1.0.0",
+    "prompts": "^2.3.2"
+  },
+  "author": "Kasper Seweryn <github@wvffle.net>",
+  "private": false,
+  "repository": "https://github.com/pb-students/kluski",
+  "description": "Quine-McCluskey tools"
+}
