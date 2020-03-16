@@ -2,12 +2,6 @@ const chalk = require('chalk')
 const np2 = require('next-pow-2')
 const prompts = require('prompts')
 
-const METHOD = '!a!b + !abc + a!bde + cde + !bcd + !bce + !a!ce + !abd!e'
-const TRUTHS = [
-  0, 1, 2, 3, 4, 5, 6, 7,
-  9, 10, 11, 12, 13, 14, 15,
-  19, 21, 22, 23, 31
-]
 const POWERS = {
   1: 0,
   2: 1,
