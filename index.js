@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const chalk = require('chalk')
 const np2 = require('next-pow-2')
 const prompts = require('prompts')

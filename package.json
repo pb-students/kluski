@@ -11,5 +11,8 @@
   "author": "Kasper Seweryn <github@wvffle.net>",
   "private": false,
   "repository": "https://github.com/pb-students/kluski",
-  "description": "Quine-McCluskey tools"
+  "description": "Quine-McCluskey tools",
+  "bin": {
+    "kluski": "index.js"
+  }
 }
