@@ -31,6 +31,16 @@ const toBinary = (number, bits) => {
   return ('0'.repeat(bits) + bin).slice(bin.length)
 }
 
+const expandImplicant = (implicant) => {
+  const idx = implicant.indexOf('-')
+  if (!~idx) return [ implicant ]
+
+  return [
+    ...expandImplicant(replaceAt(implicant, idx, '0')),
+    ...expandImplicant(replaceAt(implicant, idx, '1'))
+  ]
+}
+
 const parseMethod = (method) => {
   const words = method.split('+')
   let bits = 0
@@ -315,16 +325,6 @@ const kluski = (truths) => {
     console.log()
 
     // Select essential ones
-    const expandImplicant = (implicant) => {
-      const idx = implicant.indexOf('-')
-      if (!~idx) return [ implicant ]
-
-      return [
-        ...expandImplicant(replaceAt(implicant, idx, '0')),
-        ...expandImplicant(replaceAt(implicant, idx, '1'))
-      ]
-    }
-
     const map = {}
     for (const implicant of primeImplicants) {
       map[implicant] = Array(size).fill(false)
