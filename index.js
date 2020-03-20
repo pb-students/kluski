@@ -205,7 +205,7 @@ const kluski = (truths) => {
   const bits = POWERS[size]
   const binaries = truths.map(n => toBinary(n, bits))
 
-  const grouped = Array(bits + 1).fill([])
+  const grouped = Array(bits + 1).fill(0).map(i => [])
   for (const binary of binaries) {
     const group = binary.split('').reduce((a, n) => a + (+n), 0)
     grouped[group].push(binary)
