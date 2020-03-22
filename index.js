@@ -201,7 +201,7 @@ const truthDiff = (method, valid) => {
 }
 
 const kluski = (truths) => {
-  const size = np2(truths.reduce((a, n) => Math.max(a, n), 0))
+  const size = np2(1 + truths.reduce((a, n) => Math.max(a, n), 0))
   const bits = POWERS[size]
   const binaries = truths.map(n => toBinary(n, bits))
 

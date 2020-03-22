@@ -1,3 +1,7 @@
+<center>
+  ![kluski logo](logo.png)
+</center>
+
 # kluski
 Quine-McCluskey tools
 
